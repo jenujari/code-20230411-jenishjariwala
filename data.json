@@ -1,8 +1,26 @@
-[
-  { "Gender": "Male", "HeightCm": 171, "WeightKg": 96 },
-  { "Gender": "Male", "HeightCm": 161, "WeightKg": 85 },
-  { "Gender": "Male", "HeightCm": 180, "WeightKg": 77 },
-  { "Gender": "Female", "HeightCm": 166, "WeightKg": 62 },
-  { "Gender": "Female", "HeightCm": 150, "WeightKg": 70 },
-  { "Gender": "Female", "HeightCm": 167, "WeightKg": 82 }
-]
+{
+  "records": [
+    { "Gender": "Male", "HeightCm": 171, "WeightKg": 96 },
+    { "Gender": "Male", "HeightCm": 161, "WeightKg": 85 },
+    { "Gender": "Male", "HeightCm": 180, "WeightKg": 77 },
+    { "Gender": "Female", "HeightCm": 166, "WeightKg": 62 },
+    { "Gender": "Female", "HeightCm": 150, "WeightKg": 70 },
+    { "Gender": "Female", "HeightCm": 167, "WeightKg": 82 }
+  ],
+  "bmi_cat": [
+    "Underweight",
+    "Normal weight",
+    "Overweight",
+    "Moderately obese",
+    "Severel obese",
+    "Very severely obese"
+  ],
+  "health_risk": [
+    "Malnutrition risk",
+    "Low risk",
+    "Enhanced risk",
+    "Medium risk",
+    "High",
+    "Very high risk"
+  ]
+}

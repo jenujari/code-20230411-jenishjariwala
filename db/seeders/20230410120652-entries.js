@@ -1,9 +1,9 @@
 "use strict";
 
 var lo = require("lodash");
-var records = require("./../../data.json");
+var data = require("./../../data.json");
 
-records = lo.map(records, (v, i) => ({
+var records = lo.map(data.records, (v, i) => ({
   id: i + 1,
   gender: v.Gender,
   height_cm: v.HeightCm,
