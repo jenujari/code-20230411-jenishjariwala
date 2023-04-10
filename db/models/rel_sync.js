@@ -8,8 +8,8 @@ const sync_relations = async () => {
   User.belongsTo(BmiCategory, { foreignKey: "bmi_category_id" , as : "bmi_category" });
   User.belongsTo(HealthRisk, { foreignKey: "health_risk_id" , as :"health_risk"});
 
-  BmiCategory.hasMany(User, { foreignKey: "bmi_category_id" });
-  HealthRisk.hasMany(User, { foreignKey: "health_risk_id" });
+  BmiCategory.hasMany(User, { foreignKey: "bmi_category_id" , as : "user" });
+  HealthRisk.hasMany(User, { foreignKey: "health_risk_id" , as : "user" });
 }
 
 module.exports = sync_relations

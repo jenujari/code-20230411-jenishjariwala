@@ -10,7 +10,7 @@ class User extends Model {}
 User.init(
   {
     id: {
-      type: DataTypes.INTEGER.UNSIGNED,
+      type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true,
     },
@@ -18,12 +18,12 @@ User.init(
       type: DataTypes.ENUM("Male", "Female"),
     },
     height_cm: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.FLOAT,
       allowNull: false,
       defaultValue: 0,
     },
     weight_kg: { 
-      type: DataTypes.NUMBER,
+      type: DataTypes.FLOAT,
       allowNull: false,
       defaultValue: 0,
     },
@@ -36,12 +36,6 @@ User.init(
         h_sq = Math.pow(h_sq,2)
         if (h_sq == 0) return 0;
         return parseFloat(parseFloat(w / h_sq).toFixed(3))
-      }
-    },
-    bmi_two:{
-      type :DataTypes.VIRTUAL,
-      get() {
-        return this.getDataValue("bmi") * 2
       }
     },
     bmi_category_id: {

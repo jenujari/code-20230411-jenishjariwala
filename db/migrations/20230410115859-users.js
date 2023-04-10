@@ -22,13 +22,13 @@ module.exports = {
       },
       // Define the "height_cm" column with INTEGER type and default value of 0
       height_cm: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.FLOAT,
         allowNull: false,
         defaultValue: 0
       },
       // Define the "weight_kg" column with FLOAT type and default value of 0
       weight_kg: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.FLOAT,
         allowNull: false,
         defaultValue: 0
       },

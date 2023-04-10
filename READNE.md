@@ -4,26 +4,38 @@ Inital steps.
 
 ```
 npm install
+```
+---
+
+To run inital migration and seeding
+```
+npm run migrate
+```
+---
+
+To Test the test cases 
 
 ```
-
-
-
-#### Inital database setup
-Steps to perform for creating migration and seed data
-
+npm run test
 ```
-npx sequelize-cli migration:create --name users
-npx sequelize-cli db:migrate
-npx sequelize-cli seed:generate --name entries
-npx sequelize-cli db:seed --seed 20230410120652-entries
-```
+---
 
-#### Health risk and BMI category
+To start server
+```
+npm run dev  
+```
+---
 
-```
-npx sequelize-cli migration:create --name health_cart
-npx sequelize-cli db:migrate
-npx sequelize-cli seed:generate --name health_cart
-npx sequelize-cli db:seed --seed  20230410124038-health_chart
-```
+There are two routes made in the express app
+
+One is `GET /cron` that run throug the all user entries and based on thier BMI it will map risk id and bmi category id.
+This is made to reduce the computational time while calculating the stuff during the run time.
+
+Second API is `Get /usershealth` that featch all the user along with thier risk and bmi category details.
+
+
+Use following two url in sequnce as mentioned.
+
+http://localhost:5000/cron
+
+http://localhost:5000/usershealth

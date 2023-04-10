@@ -10,7 +10,7 @@ class BmiCategory extends Model {}
 BmiCategory.init(
   {
     id: {
-      type: DataTypes.INTEGER.UNSIGNED,
+      type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true,
     },

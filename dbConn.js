@@ -1,19 +1,20 @@
-const { Sequelize } = require("sequelize")
+const { Sequelize } = require("sequelize");
 const db_conf = require("./config/db_conf");
 
 // Define a class for database connection
 class DbConnection {
   constructor() {
     // Log the start of the connection initiation process
-    console.log(
-      "Sqlite connection initiation started.",
-      db_conf.development.storage
-    );
+    // console.log(
+    //   "Sqlite connection initiation started.",
+    //   db_conf.development.storage
+    // );
 
     // Create a new Sequelize instance with the given dialect and storage
     this._connection = new Sequelize({
       dialect: "sqlite",
       storage: db_conf.development.storage,
+      logging: process.env.NODE_ENV === "test" ? false : console.log,
     });
   }
 
