@@ -24,7 +24,10 @@ HealthRisk.init(
     // Set the model name for easier reference
     modelName: "HealthRisk",
     // Set the table name for the model
-    tableName: "health_risk"
+    tableName: "health_risk",
+    // Ignore createdAt and Updated AT
+    createdAt:false,
+    updatedAt:false
   }
 );
 

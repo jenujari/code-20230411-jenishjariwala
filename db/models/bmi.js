@@ -24,7 +24,10 @@ BmiCategory.init(
     // Set the model name for easier reference
     modelName: "BmiCategory",
     // Set the table name for the model
-    tableName: "bmi_cat"
+    tableName: "bmi_cat",
+    // Ignore createdAt and Updated AT
+    createdAt:false,
+    updatedAt:false
   }
 );
 
