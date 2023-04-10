@@ -25,5 +25,5 @@ npx sequelize-cli db:seed --seed 20230410120652-entries
 npx sequelize-cli migration:create --name health_cart
 npx sequelize-cli db:migrate
 npx sequelize-cli seed:generate --name health_cart
-npx sequelize-cli db:seed --seed  20230410124038-health_cart
+npx sequelize-cli db:seed --seed  20230410124038-health_chart
 ```
