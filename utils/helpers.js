@@ -1,3 +1,13 @@
+/**
+ * This is a risk calculation function.
+ * @function risk_extractor
+ * @param {number} bmi - calculated BMI for user
+ * @param {HealthRisk[]} risks - List of Health risk records stored in db.
+ *
+ * @example
+ *
+ *     risk_extractor(33,HealthRisk[])
+ */
 const risk_extractor = (bmi, risks) => {
   if (bmi < 18.5) {
     return risks.find((o) => o.type == risk_enum.malnutrition);
@@ -14,6 +24,16 @@ const risk_extractor = (bmi, risks) => {
   }
 };
 
+/**
+ * This is a bmi category calculation function.
+ * @function bmi_category_extractor
+ * @param {number} bmi - calculated BMI for user
+ * @param {BmiCategory[]} cats - List of BMI categories records stored in db.
+ *
+ * @example
+ *
+ *     bmi_category_extractor(33,BmiCategory[])
+ */
 const bmi_category_extractor = (bmi, cats) => {
   if (bmi < 18.5) {
     return cats.find((o) => o.type == bmi_category_enum.underweight);

@@ -2,9 +2,12 @@ const BmiCategory = require("../db/models/bmi");
 const HealthRisk = require("../db/models/risk");
 const helpers = require("./helpers");
 
+
+// Initialize variables to hold fetched data from database
 var risks 
 var cats
 
+// Fetch data from database before running tests if they dont exists
 beforeAll(async () => {
   if(!risks) {
     risks = await HealthRisk.findAll();
@@ -12,8 +15,9 @@ beforeAll(async () => {
   if(!cats) {
     cats = await BmiCategory.findAll();
   }
-})
+});
 
+// Test cases for risk_extractor function
 describe("risk_extractor", () => {
   it("returns the correct risk for a BMI less than 18.5", () => {
     const bmi = 17;
@@ -76,6 +80,8 @@ describe("risk_extractor", () => {
   });
 });
 
+
+// Test cases for bmi_category_extractor function
 describe('bmi_category_extractor', () => {
 
   it('returns the correct category for underweight BMI', () => {
